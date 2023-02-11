@@ -1,5 +1,5 @@
 <script>
-    import simpleParallax from 'simple-parallax-js';
+    // import simpleParallax from 'simple-parallax-js';
     import Carousel from "svelte-flickity";
     import { onMount } from 'svelte';
 
@@ -9,6 +9,7 @@
 	let y
 
     onMount(() => {
+    const simpleParallax = require('simple-parallax-js').default;
         let image = document.getElementsByClassName('thumbnail');
         new simpleParallax(image);
         let desc_1 = document.getElementsByClassName('desc_1');
@@ -34,7 +35,9 @@
 		wrapAround: true
 	};
     let video_landing = "video_landing.mp4"
+
     // let video_landing = "INTRAORDINAIRE_final.mp4"
+    let img1
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -119,7 +122,7 @@
 
 <section class="projects container-full py-5">
 <Carousel options={carouselOptions}>
-	<div class="carousel-cell c1 me-5 mb-3">
+	<div class="carousel-cell me-5 mb-3" style="background: url('img/projects/1.jpg')  no-repeat center center/cover;">
         <div class="w-100 h-100 d-flex flex-row text-center justify-content-center align-items-center">
             <div>
                 <h2 class="mb-5 h1">Titre du projet 1</h2>
@@ -127,7 +130,7 @@
             </div>
         </div>
     </div>
-	<div class="carousel-cell c2 me-5 mb-3">
+	<div class="carousel-cell me-5 mb-3" style="background: url('img/projects/2.jpg')  no-repeat center center/cover;">
         <div class="w-100 h-100 d-flex flex-row text-center justify-content-center align-items-center">
             <div>
                 <h2 class="mb-5 h1">Titre du projet 2</h2>
@@ -135,7 +138,7 @@
             </div>
         </div>
     </div>
-	<div class="carousel-cell c3 me-5 mb-3">
+	<div class="carousel-cell me-5 mb-3" style="background: url('img/projects/3.jpg')  no-repeat center center/cover;">
         <div class="w-100 h-100 d-flex flex-row text-center justify-content-center align-items-center">
             <div>
                 <h2 class="mb-5 h1">Titre du projet 3</h2>
@@ -162,7 +165,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <section class="team container-fluid mx-auto">
     <!-- <h2 class="title text-uppercase p-5">Notre équipe</h2> -->
     <div class="cardboard row">
-        <div class="card-people p1 col-3">
+        <div class="card-people col-3" style="background: url('img/team/1.jpg') no-repeat center center/cover">
             <a class="w-100 h-100 d-flex" href="">
                 <div class="poste mt-auto w-100 p-3">
                     <h3 class="h5">NAME NAME</h3>
@@ -171,7 +174,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             </a>
         </div>
 
-        <div class="card-people p2 col-3">
+        <div class="card-people col-3" style="background: url('img/team/2.jpg') no-repeat center center/cover">
             <a class="w-100 h-100 d-flex" href="">
                 <div class="poste mt-auto w-100 p-3">
                     <h3 class="h5">NAME NAME</h3>
@@ -179,7 +182,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                 </div>
             </a>
         </div>
-        <div class="card-people p1 col-3">
+        <div class="card-people col-3" style="background: url('img/team/3.jpg') no-repeat center center/cover">
             <a class="w-100 h-100 d-flex" href="">
                 <div class="poste mt-auto w-100 p-3">
                     <h3 class="h5">NAME NAME</h3>
@@ -188,7 +191,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             </a>
         </div>
 
-        <div class="card-people p2 col-3">
+        <div class="card-people col-3" style="background: url('img/team/2.jpg') no-repeat center center/cover">
             <a class="w-100 h-100 d-flex" href="">
                 <div class="poste mt-auto w-100 p-3">
                     <h3 class="h5">NAME NAME</h3>
@@ -199,7 +202,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
 
     <div class="cardboard row">
-        <div class="card-people p1 col-2">
+        <div class="card-people col-2" style="background: url('img/team/1.jpg') no-repeat center center/cover">
             <a class="w-100 h-100 d-flex" href="">
                 <div class="poste mt-auto w-100 p-3">
                     <h3 class="h5">NAME NAME</h3>
@@ -208,7 +211,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             </a>
         </div>
 
-        <div class="card-people p2 col-2">
+        <div class="card-people col-2" style="background: url('img/team/2.jpg') no-repeat center center/cover">
             <a class="w-100 h-100 d-flex" href="">
                 <div class="poste mt-auto w-100 p-3">
                     <h3 class="h5">NAME NAME</h3>
@@ -217,7 +220,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             </a>
         </div>
 
-        <div class="card-people p3 col-2">
+        <div class="card-people col-2" style="background: url('img/team/3.jpg') no-repeat center center/cover">
             <a class="w-100 h-100 d-flex" href="">
                 <div class="poste mt-auto w-100 p-3">
                     <h3 class="h5">NAME NAME</h3>
@@ -226,7 +229,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             </a>
         </div>
 
-        <div class="card-people p1 col-2">
+        <div class="card-people col-2" style="background: url('img/team/1.jpg') no-repeat center center/cover">
             <a class="w-100 h-100 d-flex" href="">
                 <div class="poste mt-auto w-100 p-3">
                     <h3 class="h5">NAME NAME</h3>
@@ -235,7 +238,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             </a>
         </div>
 
-        <div class="card-people p2 col-2">
+        <div class="card-people col-2" style="background: url('img/team/2.jpg') no-repeat center center/cover">
             <a class="w-100 h-100 d-flex" href="">
                 <div class="poste mt-auto w-100 p-3">
                     <h3 class="h5">NAME NAME</h3>
@@ -244,7 +247,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             </a>
         </div>
 
-        <div class="card-people p3 col-2">
+        <div class="card-people col-2" style="background: url('img/team/3.jpg') no-repeat center center/cover">
             <a class="w-100 h-100 d-flex" href="">
                 <div class="poste mt-auto w-100 p-3">
                     <h3 class="h5">NAME NAME</h3>
@@ -428,8 +431,6 @@ h1 {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center
-		center/cover;
 }
 
 .video-container video {
@@ -504,7 +505,7 @@ h2.title {
             position: absolute;
             // top:50px;
             left:-40px;
-            bottom: 0;
+            bottom: -40px;
             box-shadow: 10px 10px 0 var(--theme-2);
         }
     }
@@ -628,15 +629,15 @@ h2.title {
 
     }
 
-    .p1 {
-            background: url("img/team/1.jpg")  no-repeat center center/cover;
-        }
-    .p2 {
-            background: url("img/team/2.jpg")  no-repeat center center/cover;
-        }
-    .p3 {
-            background: url("img/team/3.jpg")  no-repeat center center/cover;
-        }
+    // .p1 {
+    //         background: url("img/team/1.jpg")  no-repeat center center/cover;
+    //     }
+    // .p2 {
+    //         background: url("img/team/2.jpg")  no-repeat center center/cover;
+    //     }
+    // .p3 {
+    //         background: url("img/team/3.jpg")  no-repeat center center/cover;
+    //     }
 }
 
 
